@@ -126,7 +126,9 @@ class Graph(object):
         """Draw the graph
         """
         c = Canvas()
-        for node in self.nodes.itervalues():
+        from rich import print
+        print(self.nodes)
+        for node in self.nodes.values():
             self.draw_node(c, node)
         for edge in self.edges:
             self.draw_edge(c, edge)
